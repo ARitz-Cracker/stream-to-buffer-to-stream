@@ -1,8 +1,7 @@
 {
 	"name": "stream-to-buffer-to-stream",
-	"version": "1.0.0",
-	"description": "Simple event-emitting HTTP/1.1 POST request parser",
-	"bin": "./bin/snowball_server.js",
+	"version": "1.0.1",
+	"description": "Turns streams into buffers, and buffers into streams",
 	"main": "index.js",
 	"scripts": {
 		"docs": "jsdoc ./index.js ./README.md -d docs",
