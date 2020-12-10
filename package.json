@@ -1,0 +1,40 @@
+{
+	"name": "stream-to-buffer-to-stream",
+	"version": "1.0.0",
+	"description": "Simple event-emitting HTTP/1.1 POST request parser",
+	"bin": "./bin/snowball_server.js",
+	"main": "index.js",
+	"scripts": {
+		"docs": "jsdoc ./index.js ./README.md -d docs",
+		"test": "mocha",
+		"test:all": "TEST_EVERYTHING=y mocha",
+		"test:cov": "nyc --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 mocha",
+		"test:final": "eslint . && npm run test:cov",
+		"test:lint": "eslint .",
+		"ci:start": "npm run test:final",
+		"ci:after": "nyc report --reporter=text-lcov | coveralls",
+		"prepublishOnly": "npm run test:final"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ARitz-Cracker/stream-to-buffer-to-stream"
+	},
+	"keywords": [],
+	"author": "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ARitz-Cracker/stream-to-buffer-to-stream/issues"
+	},
+	"homepage": "https://github.com/ARitz-Cracker/stream-to-buffer-to-stream",
+	"dependencies": {
+		"safeify-object": "^1.0.0"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"chai-as-promised": "^7.1.1",
+		"eslint": "^7.15.0",
+		"mocha": "^8.2.1",
+		"nyc": "^15.1.0",
+		"jsdoc": "^3.6.6"
+	}
+}
